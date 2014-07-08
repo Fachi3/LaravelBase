@@ -6,3 +6,11 @@ composer.lock
 .env.php
 .DS_Store
 Thumbs.db
+
+*.sublime-project
+*.sublime-workspace
+.sass-cache
+/app/storage/logs/*
+/app/storage/views/*
+/app/storage/sessions/*
+!.gitkeep
