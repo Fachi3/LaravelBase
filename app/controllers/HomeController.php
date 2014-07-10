@@ -13,7 +13,18 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		return 'Autenticado';
+
+        $url = 'customers/1439807/domains';
+
+        $params = array(
+                        'url'    => $url,
+                        //'size'   => $size,
+                        //'offset' => $offset,
+                    );
+        $resultados = json_decode($this->contactar_api($params));
+
+        return $resultados->domains;
+
 	}
 
 }

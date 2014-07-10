@@ -30,3 +30,8 @@ Route::post ('password/reset',  'RemindersController@postReset' );
 Route::any  ('/',  'HomeController@getIndex'   );
 
 Route::controller('panel', 'PanelController');
+
+
+
+/** API para sincronización **/
+Route::controller('api', 'RackMailApiController');
