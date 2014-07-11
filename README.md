@@ -1,5 +1,5 @@
 # Para instalar proyecto
 
-- Crear DB con el nombre de micro_laravel
+- Crear archivo local .env.local.php con el formato en env_local.php
 - Correr composer update
 - Correr php artisan migrate
