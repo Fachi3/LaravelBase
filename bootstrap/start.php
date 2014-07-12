@@ -24,9 +24,17 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-
 $env = $app->detectEnvironment( function()
 {
+
+    /**
+     * Se trata de detectar si 
+     * es un dominio .dev en el navegador o
+     * se trata de una maquina con hostname con terminación .local
+     *
+     * En caso de detectar un entorno local cargara .env.local.php
+     * De lo contrario cargara .env.production.php
+     */
     $environments = array(
                         'local' => array('*.dev','*.local'),
                     );
@@ -35,7 +43,7 @@ $env = $app->detectEnvironment( function()
     {
         foreach ((array) $domains as $domain)
         {
-            if ( !php_uname("n") ) {
+            if ( isset($_SERVER['SERVER_NAME']) ) {
                 if ( str_is($domain, $_SERVER['SERVER_NAME']) ) return $environment;
             } else {
                 if ( str_is($domain, php_uname("n")) ) return $environment;
