@@ -11,7 +11,11 @@ class LoginController extends BaseController {
 	}
 
 	public function getLogin() {
-            return View::make( 'login' );
+        if (Auth::check())
+        {
+            return Redirect::action('HomeController@getIndex');
+        }
+        return View::make( 'login' );
 	}
 
 	public function postLogin() {
