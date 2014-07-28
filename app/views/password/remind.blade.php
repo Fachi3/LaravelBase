@@ -1,32 +1,18 @@
-@extends('base-layout')
+@extends('login-layout')
 
-@section('content')
+@section('panel-title')
+Restablecer password
+@stop
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="login-panel panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Restablecer password</h3>
-                </div>
-                <div class="panel-body">
-
-                    {{ Form::open(array('url'=>URL::action('RemindersController@postRemind'), 'class'=>'form-signin', 'role'=>'form')) }}
-                        <fieldset>
-                            <div class="form-group">
-                                {{ Form::text('usuario', null, array('class'=>'form-control', 'placeholder'=>'Usuario')) }}
-                            </div>
-                            {{ Form::submit('Restablecer password', array('class'=>'btn btn-lg btn-info btn-block'))}}
-                        </fieldset>
-                    {{ Form::close() }}
-
-                </div>
-            </div>
+@section('panel-body')
+{{ Form::open(array('url'=>URL::action('RemindersController@postRemind'), 'class'=>'form-signin', 'role'=>'form')) }}
+    <fieldset>
+        <div class="form-group">
+            {{ Form::text('usuario', null, array('class'=>'form-control', 'placeholder'=>'Usuario')) }}
         </div>
-    </div>
-</div>
-<!-- /container -->
-
+        {{ Form::submit('Restablecer password', array('class'=>'btn btn-lg btn-info btn-block'))}}
+    </fieldset>
+{{ Form::close() }}
 @stop
 
 @section('footer')

@@ -5,8 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"way/generators": "dev-master",
-        "guzzle/guzzle": "dev-master"
+		"guzzlehttp/guzzle": "4.*",
+		"way/generators": "2.*",
+		"fzaninotto/faker": "1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -15,6 +16,7 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
+			"app/libraries",
 			"app/tests/TestCase.php"
 		]
 	},

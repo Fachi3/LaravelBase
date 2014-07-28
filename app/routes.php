@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-
 /**
  * Rutas de login
  */
@@ -27,11 +16,15 @@ Route::post ('password/reset',  'RemindersController@postReset' );
 /**
  * Rutas de la app
  */
-Route::any  ('/',  'HomeController@getIndex'   );
-
-Route::controller('panel', 'PanelController');
+Route::any  ('/',  'HomeController@showWelcome'   );
 
 
 
-/** API para sincronización **/
-Route::controller('api', 'RackMailApiController');
+/**
+ * Ruta por default para contenidos no encontrados
+ */
+App::missing(function($exception)
+{
+    return Redirect::action('HomeController@showWelcome');
+    // return Response::view('errors/404', array(), 404);
+});

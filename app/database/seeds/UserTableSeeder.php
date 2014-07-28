@@ -9,7 +9,7 @@ class UserTableSeeder extends Seeder {
         $usuario = new User;
 
         $usuario->login = 'admin';
-        $usuario->email = 'soporte@microbit.com';
+        $usuario->email = 'gilkudik@gmail.com';
         $usuario->password = Hash::make('Ninguna123');
 
         $usuario->nombre = '';

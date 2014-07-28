@@ -122,6 +122,11 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		/**
+		 * Generadores para artisan
+		 */
+		'Way\Generators\GeneratorsServiceProvider',
+
 	),
 
 	/*

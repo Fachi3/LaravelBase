@@ -2,29 +2,17 @@
 
 class HomeController extends BaseController {
 
-
 	public function __construct() {
 
-        $this->beforeFilter('auth', array());
+		$this->beforeFilter('auth', array());
 
-        $this->beforeFilter('csrf', array( 'on' => 'post' ));
+		$this->beforeFilter('csrf', array( 'on' => 'post' ));
 
 	}
 
-	public function getIndex()
+	public function showWelcome()
 	{
-
-        $url = 'customers/1439807/domains';
-
-        $params = array(
-                        'url'    => $url,
-                        //'size'   => $size,
-                        //'offset' => $offset,
-                    );
-        $resultados = json_decode($this->contactar_api($params));
-
-        return $resultados->domains;
-
+		return View::make('home');
 	}
 
 }

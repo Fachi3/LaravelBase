@@ -14,7 +14,7 @@ class CreateUsers extends Migration {
 	{
 		Schema::create('users', function(Blueprint $table)
 		{
-            $table->increments('id');
+			$table->increments('id');
 			$table->string('login',64);
 			$table->string('email',128);
 			$table->string('password',64);
@@ -22,7 +22,7 @@ class CreateUsers extends Migration {
 			$table->string('nombre',250);
 			$table->string('primer_apellido',250);
 			$table->string('segundo_apellido',250);
-            $table->integer('id_rol')->unsigned();
+			$table->integer('id_rol')->unsigned();
 			$table->boolean('estatus')->default(true);
 			$table->timestamps();
 		});

@@ -36,7 +36,7 @@ $env = $app->detectEnvironment( function()
      * De lo contrario cargara .env.production.php
      */
     $environments = array(
-                        'local' => array('*.dev','*.local'),
+                        'local' => array('localhost', '*.dev', '*.local'),
                     );
 
     foreach ($environments as $environment => $domains)
@@ -53,7 +53,6 @@ $env = $app->detectEnvironment( function()
 
     return 'production';
 });
-
 
 /*
 |--------------------------------------------------------------------------

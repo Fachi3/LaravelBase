@@ -1,15 +1,16 @@
 @extends('base-layout')
 
 @section('content')
-<div class="container">
+<div class="container login">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Bienvenido</h3>
+                    <h3 class="panel-title">
+                        @yield('panel-title', '')
+                    </h3>
                 </div>
                 <div class="panel-body">
-
 
                     <div class="mensajes">
 
@@ -31,18 +32,7 @@
 
                     </div>
 
-
-                    {{ Form::open(array('url'=>URL::to('login'), 'class'=>'form-signin', 'role'=>'form')) }}
-                        <fieldset>
-                            <div class="form-group">
-                                {{ Form::text('usuario', null, array('class'=>'form-control', 'placeholder'=>'Usuario')) }}
-                            </div>
-                            <div class="form-group">
-                                {{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}
-                            </div>
-                            {{ Form::submit('Ingresar', array('class'=>'btn btn-lg btn-info btn-block'))}}
-                        </fieldset>
-                    {{ Form::close() }}
+                    @yield('panel-body', '')
 
                 </div>
             </div>
@@ -50,15 +40,4 @@
     </div>
 </div>
 <!-- /container -->
-@stop
-
-
-@section('footer')
-<footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p class="text-center">¿Olvidaste tus <a href="{{ URL::to('password/remind') }}">credenciales de acceso</a>?</p>
-        </div>
-    </div>
-</footer>
 @stop

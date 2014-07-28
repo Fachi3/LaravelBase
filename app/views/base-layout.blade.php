@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>
-            @yield('title', 'Panel de ejemplo')
+            @yield('title', getenv('APP_NAME'))
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -11,7 +11,9 @@
         <link rel="shortcut icon" type="image/png" href="/favicon.png">
 
         <!-- styles -->
-        <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        {{ HTML::style('assets/css/bootstrap.css'); }}
+        {{ HTML::style('assets/css/app.css'); }}
 
     </head>
 
@@ -24,8 +26,9 @@
         @yield('footer', '')
 
         <!-- scripts -->
-        <script src="/assets/js/jquery.js"></script>
-        <script src="/assets/js/bootstrap.js"></script>
+        {{ HTML::script('assets/js/jquery.js'); }}
+        {{ HTML::script('assets/js/bootstrap.js'); }}
+        {{ HTML::script('assets/js/app.js'); }}
 
     </body>
 </html>
