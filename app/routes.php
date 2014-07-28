@@ -18,7 +18,10 @@ Route::post ('password/reset',  'RemindersController@postReset' );
  */
 Route::any  ('/',  'HomeController@showWelcome'   );
 
-
+/**
+ * Rutas de testeo
+ */
+Route::controller('testing', 'TestingController' );
 
 /**
  * Ruta por default para contenidos no encontrados

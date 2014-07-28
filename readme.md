@@ -10,3 +10,6 @@
 - [Cheatsheet de git](http://rogerdudler.github.io/git-guide/index.es.html)
 - [Laravel Docs](http://laravel.com/docs/docs)
 - [Laravel Cheat Sheet](http://cheats.jesse-obrien.ca/)
+- [Generators](https://github.com/JeffreyWay/Laravel-4-Generators)
+- [Guzzle](https://github.com/guzzle/guzzle)
+- [Faker](https://github.com/fzaninotto/faker)
