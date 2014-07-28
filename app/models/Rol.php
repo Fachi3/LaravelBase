@@ -21,7 +21,7 @@ class Rol extends Eloquent implements UserInterface, RemindableInterface {
      */
     protected $table = 'roles';
 
-    public function user()
+    public function users()
     {
         return $this->hasMany('User','id_rol','id');
     }

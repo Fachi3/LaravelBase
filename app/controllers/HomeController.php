@@ -8,14 +8,6 @@ class HomeController extends BaseController {
 
         $this->beforeFilter('csrf', array( 'on' => 'post' ));
 
-        if ( ! Auth::user()->hasRole( 'Administrador' ) )
-        {
-            Auth::logout();
-            return Redirect::action('LoginController@getLogin')
-                ->with('message_info', 'No está autorizado')
-                ;
-        }
-
     }
 
     public function showWelcome()

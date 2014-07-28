@@ -27,8 +27,8 @@ class RolesTableSeeder extends Seeder {
         ));
 
         Rol::create(array(
-            'name'            => 'Distribuidor',
-            'description'       => 'Distribuidor autorizado de servicios',
+            'name'            => 'Usuario',
+            'description'     => 'Rol con privilegios de lectura',
         ));
 
     }
