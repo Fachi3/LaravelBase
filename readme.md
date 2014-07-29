@@ -2,8 +2,8 @@
 
 - Crear archivo local .env.local.php con el formato en env_local.sample.php
 - Verificar la detección del entorno en bootstrap/start.php
-- Correr composer update
-- Correr php artisan migrate
+- Correr composer install
+- Correr php artisan migrate --seed
 
 ## Documentación
 -------------
@@ -13,3 +13,7 @@
 - [Generators](https://github.com/JeffreyWay/Laravel-4-Generators)
 - [Guzzle](https://github.com/guzzle/guzzle)
 - [Faker](https://github.com/fzaninotto/faker)
+
+> Como buena práctica se sugiere el uso del sufijo .local para los nombres de host, especialmente en UNIX, por ejemplo misuperlinux.local
+> [.local](http://en.wikipedia.org/wiki/.local)
+> [Zeroconf](http://en.wikipedia.org/wiki/Zeroconf)
