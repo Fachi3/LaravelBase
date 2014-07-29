@@ -12,6 +12,7 @@
 
         <!-- styles -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        @yield('styles', '')
         {{ HTML::style('assets/css/bootstrap.css'); }}
         {{ HTML::style('assets/css/app.css'); }}
 
@@ -28,6 +29,7 @@
         <!-- scripts -->
         {{ HTML::script('assets/js/jquery.js'); }}
         {{ HTML::script('assets/js/bootstrap.js'); }}
+        @yield('scripts', '')
         {{ HTML::script('assets/js/app.js'); }}
 
     </body>

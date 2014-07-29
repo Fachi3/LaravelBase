@@ -1,6 +1,7 @@
 @extends('layout')
 
-@section('header')
+@section('content')
+
 <header class="container">
     <div class="row">
         <div class="col-md-12">
@@ -12,9 +13,7 @@
         </div>
     </div>
 </header>
-@stop
 
-@section('content')
 <div class="container">
     <div class="row">
         @include('partials.sidebar-menu',array())

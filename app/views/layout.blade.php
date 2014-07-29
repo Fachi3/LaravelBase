@@ -1,5 +1,6 @@
 @extends('base-layout')
 
+@section('header')
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -21,7 +22,6 @@
     </div>
 </nav>
 
-
 <div class="mensajes container">
 
     @if(Session::has('message_success'))
@@ -41,7 +41,7 @@
     @endif
 
 </div>
-
+@stop
 
 @section('footer')
 <footer class="container">
