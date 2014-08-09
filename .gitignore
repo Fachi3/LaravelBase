@@ -11,6 +11,7 @@ Thumbs.db
 *.sublime-workspace
 .sass-cache
 /app/storage/logs/*
+/app/storage/meta/*
 /app/storage/views/*
 /app/storage/sessions/*
 !.gitkeep
