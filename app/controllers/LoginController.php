@@ -16,7 +16,12 @@ class LoginController extends BaseController {
 
 	public function postLogin() {
 
-        if ( Auth::attempt (array('login'=>Input::get('usuario'), 'password' => Input::get('password'), 'estatus' => 1, ) ) ) {
+        $remember = false;
+        if (Input::has('remember')) {
+            $remember = true;
+        }
+
+        if ( Auth::attempt ( array('login'=>Input::get('usuario'), 'password' => Input::get('password'), 'estatus' => 1), $remember ) ) {
             return Redirect::action('HomeController@showWelcome')
                 ->with('message_success', 'Haz iniciado sesión correctamente')
                 ;

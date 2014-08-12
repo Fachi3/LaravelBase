@@ -13,7 +13,14 @@ Bienvenido
         <div class="form-group">
             {{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}
         </div>
-        {{ Form::submit('Ingresar', array('class'=>'btn btn-lg btn-info btn-block'))}}
+        <div class="form-group">
+            <div class="checkbox">
+                <label for="remember">
+                    {{ Form::checkbox('remember', '0', false, array()) }} Permanecer conectado
+                </label>
+            </div>
+        </div>
+        {{ Form::submit('Ingresar', array('class'=>'btn btn-lg btn-info btn-block')) }}
     </fieldset>
 {{ Form::close() }}
 @stop

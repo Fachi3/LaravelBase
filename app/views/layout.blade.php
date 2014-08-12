@@ -1,7 +1,7 @@
 @extends('base-layout')
 
 @section('header')
-<nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
@@ -15,8 +15,8 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="/">Inicio</a></li>
-                <li><a href="{{ URL::action('LoginController@anyLogout') }}">Cerrar sesión</a></li>
+                <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+                <li><a href="{{ URL::action('LoginController@anyLogout') }}"><span class="glyphicon glyphicon-off"></span> Cerrar sesión</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

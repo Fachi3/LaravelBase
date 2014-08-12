@@ -1,5 +1,17 @@
 @extends('base-layout')
 
+@section('header')
+<div class="container login-header">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1>{{ getenv('APP_NAME') }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+@stop
+
 @section('content')
 <div class="container login">
     <div class="row">
