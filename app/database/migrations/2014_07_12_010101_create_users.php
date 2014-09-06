@@ -18,7 +18,7 @@ class CreateUsers extends Migration {
 			$table->string('login',64);
 			$table->string('email',128);
 			$table->string('password',64);
-			$table->string('remember_token',128);
+            $table->string('remember_token',100)->nullable();
 			$table->string('nombre',250);
 			$table->string('primer_apellido',250);
 			$table->string('segundo_apellido',250);
